@@ -3,7 +3,7 @@
 03|Some posts save fine, others fail with "Malformed request body". I can't figure out what's different about the ones that fail.
 04|When I click "Create post" the whole page flashes and my form data shows up in the browser's address bar. The post usually never appears.
 05|The category filter dropdown does nothing. I pick "tech" and still see food and travel posts.
-06|New posts don't show up in the list until I reload the page. Edits show up right away though.
+06|New posts don't show up in the list until I reload the page or change the filter. Same with edits. No errors anywhere.
 07|The list of posts loads, but create, edit and delete all fail with "Failed to fetch". A teammate says the API works perfectly in curl/Postman.
 08|Creating a post always says title, content and category are required, even though I filled them all in. Editing an existing post works fine.
 09|QA managed to create a post with a blank title via the API. Another QA request with no category got a 500 instead of a 400.
