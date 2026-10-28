@@ -1,0 +1,10 @@
+node_modules/
+dist/
+target/
+.drill
+drills/log.csv
+*.log
+.idea/
+.vscode/
+*.iml
+.DS_Store
