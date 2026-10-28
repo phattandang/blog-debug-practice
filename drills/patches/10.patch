@@ -1,0 +1,12 @@
+diff --git a/backend/src/main/java/com/practice/blog/post/PostService.java b/backend/src/main/java/com/practice/blog/post/PostService.java
+index 55dd8b7..cbd3a21 100644
+--- a/backend/src/main/java/com/practice/blog/post/PostService.java
++++ b/backend/src/main/java/com/practice/blog/post/PostService.java
+@@ -26,7 +26,6 @@ public class PostService {
+         Post post = new Post();
+         applyRequest(post, request);
+         post.setAuthorId(userId);
+-        post.setPublished(true);
+         post.setCreatedAt(Instant.now());
+         post.setUpdatedAt(post.getCreatedAt());
+         return PostResponse.from(repository.save(post));

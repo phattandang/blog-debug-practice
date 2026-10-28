@@ -1,0 +1,15 @@
+diff --git a/frontend/src/postPayload.js b/frontend/src/postPayload.js
+index 25c888d..891cc25 100644
+--- a/frontend/src/postPayload.js
++++ b/frontend/src/postPayload.js
+@@ -1,9 +1,6 @@
+ // Converts the form's string state into the JSON body the API expects.
+ export function toPayload(form) {
+-  const tags = form.tags
+-    .split(',')
+-    .map((t) => t.trim())
+-    .filter(Boolean);
++  const tags = form.tags.trim() === '' ? undefined : form.tags;
+ 
+   return {
+     title: form.title,

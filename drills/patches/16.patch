@@ -1,0 +1,13 @@
+diff --git a/backend/src/main/java/com/practice/blog/post/PostService.java b/backend/src/main/java/com/practice/blog/post/PostService.java
+index 55dd8b7..bc110ba 100644
+--- a/backend/src/main/java/com/practice/blog/post/PostService.java
++++ b/backend/src/main/java/com/practice/blog/post/PostService.java
+@@ -83,7 +83,7 @@ public class PostService {
+     }
+ 
+     private void checkOwner(Post post, String userId) {
+-        if (!post.getAuthorId().equals(userId)) {
++        if (post.getAuthorId().equals(userId)) {
+             throw new ForbiddenException("You can only modify your own posts");
+         }
+     }

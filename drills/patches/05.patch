@@ -1,0 +1,13 @@
+diff --git a/frontend/src/api.js b/frontend/src/api.js
+index 4fe344d..68914ea 100644
+--- a/frontend/src/api.js
++++ b/frontend/src/api.js
+@@ -26,7 +26,7 @@ async function request(path, { method = 'GET', userId, body } = {}) {
+ }
+ 
+ export function listPosts(category) {
+-  const query = category ? `?category=${encodeURIComponent(category)}` : '';
++  const query = category ? `?cat=${encodeURIComponent(category)}` : '';
+   return request(`/api/posts${query}`);
+ }
+ 

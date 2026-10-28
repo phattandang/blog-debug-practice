@@ -1,0 +1,12 @@
+diff --git a/backend/src/main/java/com/practice/blog/common/CorsConfig.java b/backend/src/main/java/com/practice/blog/common/CorsConfig.java
+index 251a008..006bbf0 100644
+--- a/backend/src/main/java/com/practice/blog/common/CorsConfig.java
++++ b/backend/src/main/java/com/practice/blog/common/CorsConfig.java
+@@ -12,6 +12,6 @@ public class CorsConfig implements WebMvcConfigurer {
+         registry.addMapping("/api/**")
+                 .allowedOrigins("http://localhost:5173")
+                 .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
+-                .allowedHeaders("Content-Type", "x-user-id");
++                .allowedHeaders("Content-Type");
+     }
+ }

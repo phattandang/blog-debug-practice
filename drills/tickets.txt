@@ -1,0 +1,18 @@
+01|Creating a post fails with a red error banner. Editing and deleting my posts fail too. The list loads fine.
+02|Saving any post (create or edit) fails with a generic "Request failed" style error. Deleting works.
+03|Some posts save fine, others fail with "Malformed request body". I can't figure out what's different about the ones that fail.
+04|When I click "Create post" the whole page flashes and my form data shows up in the browser's address bar. The post usually never appears.
+05|The category filter dropdown does nothing. I pick "tech" and still see food and travel posts.
+06|New posts don't show up in the list until I reload the page. Edits show up right away though.
+07|The list of posts loads, but create, edit and delete all fail with "Failed to fetch". A teammate says the API works perfectly in curl/Postman.
+08|Creating a post always says title, content and category are required, even though I filled them all in. Editing an existing post works fine.
+09|QA managed to create a post with a blank title via the API. Another QA request with no category got a 500 instead of a 400.
+10|Freshly created posts don't show the "· published" marker in the list. The spec says new posts are always published.
+11|The API-contract test suite is red after the latest merge. Something about auto-generated excerpts on long posts. The UI looks normal to you.
+12|The mobile team (calling the API directly, not using our form) says that when they send "excerpt": "" the post ends up with an empty excerpt in the list.
+13|A partner integration says POST /api/posts "doesn't follow the spec". Posts are being created, and nobody in the UI has noticed anything.
+14|After a teammate's "small rename refactor", the backend won't start at all.
+15|After the "remove unnecessary annotations" cleanup PR, the post list shows "Could not load posts". Creating a post appears to succeed but it never shows up.
+16|I can't edit or delete my own posts: "You can only modify your own posts". Weirdly, someone else told me they CAN edit mine.
+17|I enter tags when creating a post but they never show up in the list. Are they even being saved?
+18|Nothing works. The page says "Could not load posts: Failed to fetch". The backend is definitely running.

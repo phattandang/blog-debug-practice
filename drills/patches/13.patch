@@ -1,0 +1,12 @@
+diff --git a/backend/src/main/java/com/practice/blog/post/PostController.java b/backend/src/main/java/com/practice/blog/post/PostController.java
+index f6f1bab..a3c96e0 100644
+--- a/backend/src/main/java/com/practice/blog/post/PostController.java
++++ b/backend/src/main/java/com/practice/blog/post/PostController.java
+@@ -28,7 +28,6 @@ public class PostController {
+     }
+ 
+     @PostMapping
+-    @ResponseStatus(HttpStatus.CREATED)
+     public PostResponse create(@RequestHeader("x-user-id") String userId,
+                                @Valid @RequestBody PostRequest request) {
+         return service.create(request, userId);

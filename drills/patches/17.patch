@@ -1,0 +1,13 @@
+diff --git a/backend/src/main/java/com/practice/blog/post/PostResponse.java b/backend/src/main/java/com/practice/blog/post/PostResponse.java
+index c6eead4..3edf6bb 100644
+--- a/backend/src/main/java/com/practice/blog/post/PostResponse.java
++++ b/backend/src/main/java/com/practice/blog/post/PostResponse.java
+@@ -24,7 +24,7 @@ public record PostResponse(
+                 post.getContent(),
+                 post.getCategory(),
+                 post.getExcerpt(),
+-                List.copyOf(post.getTags()),
++                List.of(),
+                 post.getReadTime(),
+                 post.isPublished(),
+                 post.getAuthorId(),

@@ -1,0 +1,12 @@
+diff --git a/frontend/src/components/PostForm.jsx b/frontend/src/components/PostForm.jsx
+index 04af043..4877464 100644
+--- a/frontend/src/components/PostForm.jsx
++++ b/frontend/src/components/PostForm.jsx
+@@ -19,7 +19,6 @@ export default function PostForm({ initialPost, onSubmit, onCancel }) {
+   }
+ 
+   async function handleSubmit(e) {
+-    e.preventDefault();
+     setError(null);
+     setSubmitting(true);
+     try {

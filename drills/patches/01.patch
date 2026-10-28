@@ -1,0 +1,13 @@
+diff --git a/frontend/src/api.js b/frontend/src/api.js
+index 4fe344d..628d0db 100644
+--- a/frontend/src/api.js
++++ b/frontend/src/api.js
+@@ -11,7 +11,7 @@ export class ApiError extends Error {
+ async function request(path, { method = 'GET', userId, body } = {}) {
+   const headers = {};
+   if (body !== undefined) headers['Content-Type'] = 'application/json';
+-  if (userId) headers['x-user-id'] = userId;
++  if (userId) headers['user-id'] = userId;
+ 
+   const res = await fetch(`${API_URL}${path}`, {
+     method,

@@ -1,10 +1,10 @@
-node_modules/
-dist/
-target/
-.drill
-drills/log.csv
+*.iml
 *.log
+.DS_Store
+.drill
 .idea/
 .vscode/
-*.iml
-.DS_Store
+dist/
+drills/log.csv
+node_modules/
+target/

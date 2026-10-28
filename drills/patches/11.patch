@@ -1,0 +1,13 @@
+diff --git a/backend/src/main/java/com/practice/blog/post/PostService.java b/backend/src/main/java/com/practice/blog/post/PostService.java
+index 55dd8b7..e65ac3c 100644
+--- a/backend/src/main/java/com/practice/blog/post/PostService.java
++++ b/backend/src/main/java/com/practice/blog/post/PostService.java
+@@ -65,7 +65,7 @@ public class PostService {
+         if (excerpt != null && !excerpt.isBlank()) {
+             return excerpt;
+         }
+-        return content.length() <= EXCERPT_LENGTH ? content : content.substring(0, EXCERPT_LENGTH);
++        return content.length() <= EXCERPT_LENGTH ? content : content.substring(0, EXCERPT_LENGTH - 1);
+     }
+ 
+     private void applyRequest(Post post, PostRequest request) {

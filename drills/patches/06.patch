@@ -1,0 +1,12 @@
+diff --git a/frontend/src/App.jsx b/frontend/src/App.jsx
+index a37a499..d7f1615 100644
+--- a/frontend/src/App.jsx
++++ b/frontend/src/App.jsx
+@@ -30,7 +30,6 @@ export default function App() {
+     } else {
+       await createPost(payload, userId);
+     }
+-    await refresh();
+   }
+ 
+   async function handleDelete(post) {

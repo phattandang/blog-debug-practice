@@ -1,0 +1,26 @@
+diff --git a/backend/src/main/java/com/practice/blog/post/PostRepository.java b/backend/src/main/java/com/practice/blog/post/PostRepository.java
+index 7ac761e..1b0b949 100644
+--- a/backend/src/main/java/com/practice/blog/post/PostRepository.java
++++ b/backend/src/main/java/com/practice/blog/post/PostRepository.java
+@@ -6,7 +6,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
+ 
+ public interface PostRepository extends JpaRepository<Post, Long> {
+ 
+-    List<Post> findByCategoryIgnoreCaseOrderByCreatedAtDesc(String category);
++    List<Post> findByCategoryNameIgnoreCaseOrderByCreatedAtDesc(String category);
+ 
+     List<Post> findAllByOrderByCreatedAtDesc();
+ }
+diff --git a/backend/src/main/java/com/practice/blog/post/PostService.java b/backend/src/main/java/com/practice/blog/post/PostService.java
+index 55dd8b7..751e870 100644
+--- a/backend/src/main/java/com/practice/blog/post/PostService.java
++++ b/backend/src/main/java/com/practice/blog/post/PostService.java
+@@ -36,7 +36,7 @@ public class PostService {
+     public List<PostResponse> list(String category) {
+         List<Post> posts = (category == null || category.isBlank())
+                 ? repository.findAllByOrderByCreatedAtDesc()
+-                : repository.findByCategoryIgnoreCaseOrderByCreatedAtDesc(category);
++                : repository.findByCategoryNameIgnoreCaseOrderByCreatedAtDesc(category);
+         return posts.stream().map(PostResponse::from).toList();
+     }
+ 
